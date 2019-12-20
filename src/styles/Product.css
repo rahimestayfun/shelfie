@@ -1,0 +1,27 @@
+.product-container{
+    width: 650px;
+    height: 250px;
+    padding: 10px;
+    border: 1px solid black;
+    box-sizing: border-box;
+    background-color:#d34735 ;
+    border-radius: 10px;
+    margin-top: 25px;
+    margin-left: 300px;
+    
+
+}
+.product-image{
+    width: 360px;
+    height: 210px;
+    border: 1px solid rgb(19, 18, 18);
+    float: left;
+}
+.product-info{
+    justify-content: right;
+ 
+
+    font-size: 25px;
+
+    box-sizing: border-box;
+}

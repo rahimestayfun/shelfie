@@ -1,12 +1,12 @@
 .form-container{
-    width: 500px;
-    height:565px;
+    width: 630px;
+    height:680px;
     border-radius: 5px;
     background-color:#3ad996 ;
     padding: 25px;
     box-sizing: border-box;
     float:right;
-    margin-right: 20px;
+    margin-right: 300px;
 }
 
 .form-list{
@@ -28,14 +28,14 @@
    
 }
 .cancel-button{
-    height: 40px;
+    height: 45px;
     border-radius: 5px; 
     background-color: #ed6b5a;
     border: none;
     font-size: 20px;
 }
 .add-button{
-    height: 40px;
+    height: 45px;
     border-radius: 5px;
     background-color: #ed6b5a;
     border: none;
@@ -44,8 +44,8 @@
 }
 
 img{
-    width: 350px;
-    height: 200px;
+    width: 450px;
+    height: 300px;
     margin: auto;
     
 }

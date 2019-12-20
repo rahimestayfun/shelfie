@@ -1,5 +1,6 @@
-import React, { Component } from 'react'
-import '../../styles/Form.css'
+import React, { Component } from 'react';
+import '../../styles/Form.css';
+import axios from 'axios'
 
 export default class Form extends Component {
     constructor() {
@@ -31,13 +32,23 @@ export default class Form extends Component {
             price: ''
         })
     }
+    handleAdd=()=>{
+        const {image,name,price}=this.state;
+        let body= {image,name,price};
+        axios.post('/api/product',body).then(response=>{
+            this.props.updateInventory(response.data)
 
+
+        })
+
+        
+    }
 
     render() {
         return (
             <div className='form-container'>
                 <div className='form-list'>
-                    <img src="https://via.placeholder.com/150"></img>
+                    <img src="https://via.placeholder.com/150" alt='product'></img>
                     <span>Image URL</span>
                     <input className="input-field" onChange={this.handleImage} value={this.state.image} />
 
@@ -50,7 +61,7 @@ export default class Form extends Component {
                     <div className="form-button-list">
                         <button className="cancel-button" onClick={this.handleCancel}>Cancel</button>
 
-                        <button className="add-button">Add to Inventory</button>
+                        <button className="add-button" onClick={this.handleAdd}>Add to Inventory</button>
                     </div>
 
                 </div>

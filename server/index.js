@@ -2,7 +2,7 @@ require('dotenv').config();
 const express = require('express');
 const app= express();
 const massive= require('massive');
-const PC = require('./products_controller')
+const PC = require('./controller')
 
 
 const {SERVER_PORT, DATABASE_STRING}= process.env;
@@ -17,8 +17,8 @@ massive(DATABASE_STRING).then(db=>{
 
 app.use(express.json());
 
-app.post('/api/products/:product_id', PC.create);
-app.get('/api/products', PC.getAll)
+app.post('/api/product', PC.create);
+app.get('/api/inventory', PC.getAll);
 
 
 
